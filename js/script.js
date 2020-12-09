@@ -1,6 +1,5 @@
-let form = document.body.querySelector('.form')
-
-form.classList.add('visible')
+let section = document.body.querySelector('section')
+section.classList.add('visible')
 
 let image_div = document.querySelector('#thumb-bar')
 function add_image()
@@ -20,7 +19,7 @@ add_image()
 let image = document.querySelector('.displayed-img')
 function handlemouseover(e)
 {
-    form.classList.remove('visible')
+    section.classList.remove('visible')
     image.src = e.target.src
     image.alt = e.target.alt
 }
