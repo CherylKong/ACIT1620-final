@@ -9,7 +9,7 @@ function add_image()
     {
         let img = document.createElement('img')
         img.src = `images/pic${i}.jpg`
-        img.alt = `image${i}`
+        img.alt = `pic${i}.jpg`
         img.setAttribute('height', '60');//img.height
         img.setAttribute('width', '50');//img.width
         image_div.appendChild(img)
@@ -17,9 +17,12 @@ function add_image()
 }
 add_image()
 
+
 function handlemouseover(e)
 {
     form.classList.remove('visible')
+    let image = document.querySelector('.displayed-img')
+    image.src = e.target.src
 }
 
 image_div.addEventListener('mouseover',handlemouseover)
