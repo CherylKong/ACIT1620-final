@@ -37,5 +37,9 @@ function apply_effect(e)
         let new_image_posiiton = image.src.replace(image.src.substring(image.src.length-4),'B.jpg')
         image.src = new_image_posiiton
     }
+    else
+    {
+        alert(`invlaid input : ${input_text.value}`)
+    }
     input_text.value = ''
 }
