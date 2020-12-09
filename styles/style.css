@@ -3,12 +3,19 @@ body
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     max-width: 640px;
+    display: grid;
     margin: auto;
     overflow-wrap: break-word;
 }
 
 div img {
     width: 20%;
+}
+
+.displayed-img, #thumb-bar
+{
+    max-width: 640px;
+    margin: 0 15px;
 }
 
 .form
@@ -18,10 +25,22 @@ div img {
     flex-wrap: wrap;
     align-items: center;
 }
+
+.visible
+{
+    visibility: hidden;
+}
+
 @media (min-width:640px)
 {
-    body 
+    body, .displayed-img
     {
         width: 80vw;
+    }
+    .form
+    {
+        margin-top: 20px;
+        justify-content: space-around;
+        flex-direction: initial;
     }
 }
