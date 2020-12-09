@@ -20,8 +20,13 @@ let image = document.querySelector('.displayed-img')
 function handlemouseover(e)
 {
     section.classList.remove('visible')
-    image.src = e.target.src
-    image.alt = e.target.alt
+    let image_src = e.target.src
+    if(image_src.indexOf('undefined') !== -1 || image_src.indexOf('undefined') !== '' )
+    {
+        image.src = image_src 
+        image.alt = e.target.alt 
+    }
+    
 }
 
 image_div.addEventListener('mouseover',handlemouseover)
