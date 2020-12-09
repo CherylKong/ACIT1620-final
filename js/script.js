@@ -17,12 +17,25 @@ function add_image()
 }
 add_image()
 
-
+let image = document.querySelector('.displayed-img')
 function handlemouseover(e)
 {
     form.classList.remove('visible')
-    let image = document.querySelector('.displayed-img')
     image.src = e.target.src
+    image.alt = e.target.alt
 }
 
 image_div.addEventListener('mouseover',handlemouseover)
+
+let input_text = document.body.querySelector('#effect')
+let button = document.body.querySelector('button')
+button.addEventListener('click', apply_effect)
+function apply_effect(e)
+{
+    if(input_text.value === 'blur')
+    {
+        let new_image_posiiton = image.src.replace(image.src.substring(image.src.length-4),'B.jpg')
+        image.src = new_image_posiiton
+    }
+    input_text.value = ''
+}
