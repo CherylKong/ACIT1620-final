@@ -7,13 +7,13 @@ body
     overflow-wrap: break-word;
 }
 
-div img {
+div img 
+{
     width: 20%;
 }
 
 .displayed-img, #thumb-bar
 {
-    margin: 0 15px;
     width: 80vw;
 }
 
@@ -36,13 +36,16 @@ div img {
     {
         width: 640px;
     }
+
     .form
     {
         justify-content: space-evenly;
         flex-direction: initial;
     }
+
     .displayed-img, #thumb-bar
     {
         width: 640px;
     }
+    
 }
