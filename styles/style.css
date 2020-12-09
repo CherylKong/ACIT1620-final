@@ -2,12 +2,25 @@ body
 {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+    width: 640px;
+    margin: 0 auto;
 }
+
 div img {
     width: 20%;
 }
 
-@media (max-width:640px)
+.form
 {
-    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+@media (min-width:640px)
+{
+    body 
+    {
+        width: 80vw;
+    }
 }
